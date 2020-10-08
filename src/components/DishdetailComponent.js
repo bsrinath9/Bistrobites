@@ -3,6 +3,7 @@ import {Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb,BreadcrumbItem,
 import {Link} from 'react-router-dom';
 import {Control, LocalForm, Errors} from 'react-redux-form';
 import { Loading } from './LoadingComponent';
+import {baseUrl} from '../shared/baseUrl';
     
 
 
@@ -103,7 +104,7 @@ import { Loading } from './LoadingComponent';
             return (
                 <div >
                 <Card>
-                    <CardImg width="100%" src={dish.image} alt={dish.name} />
+                    <CardImg width="100%" src={baseUrl + dish.image} alt={dish.name} />
                     <CardBody>
                         <CardTitle>{dish.name}</CardTitle>
                         <CardText>{dish.description}</CardText>
